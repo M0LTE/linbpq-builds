@@ -16,3 +16,6 @@ jobs:
 
       - name: Clone from John
         run: git clone git://vps1.g8bpq.net/linbpq
+
+      - name: make
+        run: pushd linbpq && make; popd
