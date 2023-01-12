@@ -19,3 +19,9 @@ jobs:
 
       - name: make
         run: pushd linbpq && make; popd
+
+      - name: Upload bin
+        uses: actions/upload-artifact@v3
+        with:
+          name: linbpq
+          path: linbpq/linbpq
