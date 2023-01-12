@@ -11,5 +11,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3
 
+      - name: Install tooling
+        run: apt install libconfig-dev libssl-dev libminiupnpc-dev libzip-dev libpcap-dev libasound-dev
+
       - name: Clone from John
         run: git clone git://vps1.g8bpq.net/linbpq
