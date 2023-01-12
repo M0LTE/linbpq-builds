@@ -5,6 +5,9 @@ For now, has an action which when manually run, pulls the linbpq source from Joh
 
 That release runs with just one dependency:
 
-```
+```shell
 sudo apt install libconfig9
+wget https://github.com/M0LTE/linbpq-builds/releases/download/release/linbpq
+chmod +x linbpq
+./linbpq -v
 ```
