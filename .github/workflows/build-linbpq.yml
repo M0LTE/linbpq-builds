@@ -1,5 +1,7 @@
 name: Build LinBPQ
 on:
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
