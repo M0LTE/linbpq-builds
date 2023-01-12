@@ -1,2 +1,10 @@
 # linbpq-builds
-Build pipelines for LinBPQ
+Build pipelines for LinBPQ.
+
+For now, has an action which when manually run, pulls the linbpq source from John's git repo, builds it on Ubuntu x64, and publishes a single release from it.
+
+That release runs with just one dependency:
+
+```
+sudo apt install libconfig9
+```
