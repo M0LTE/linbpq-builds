@@ -1,0 +1,13 @@
+name: Build LinBPQ
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #- uses: actions/checkout@v3
+
+      - name: Clone from John
+        run: git clone git://vps1.g8bpq.net/linbpq
