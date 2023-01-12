@@ -53,5 +53,3 @@ jobs:
           name: Latest
           tag_name: release
           files: linbpq/linbpq
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
