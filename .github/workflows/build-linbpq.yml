@@ -12,7 +12,7 @@ jobs:
       #- uses: actions/checkout@v3
 
       - name: Install tooling
-        run: apt install libconfig-dev libssl-dev libminiupnpc-dev libzip-dev libpcap-dev libasound-dev
+        run: sudo apt install libconfig-dev libssl-dev libminiupnpc-dev libzip-dev libpcap-dev libasound-dev
 
       - name: Clone from John
         run: git clone git://vps1.g8bpq.net/linbpq
