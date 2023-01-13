@@ -1,7 +1,7 @@
 name: Build LinBPQ
 on:
-  push:
-    branches: [ "main" ]
+  #push:
+  #  branches: [ "main" ]
   workflow_dispatch:
   schedule:
     - cron: '30 5 * * 6'  
