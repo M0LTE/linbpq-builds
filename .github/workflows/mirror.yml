@@ -1,0 +1,22 @@
+name: Update mirror
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #- name: Set up git repo
+      #  uses: actions/checkout@v3
+
+      - name: Mirror commits
+        run: |
+          git clone git://vps1.g8bpq.net/linbpq
+          cd linbpq
+          git remote add mirror https://github.com/m0lte/linbpq.git
+          git push mirror
+
+#      - name: Push changes
+ #       uses: ad-m/github-push-action@master
+  #      with:
+   #       github_token: ${{ secrets.GITHUB_TOKEN }}
