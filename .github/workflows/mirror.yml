@@ -13,7 +13,7 @@ jobs:
         run: |
           git clone git://vps1.g8bpq.net/linbpq
           cd linbpq
-          git remote add mirror https://github.com/m0lte/linbpq.git
+          git remote add mirror https://m0lte:${{secrets.pat}}github.com/m0lte/linbpq.git
           git push mirror
 
 #      - name: Push changes
