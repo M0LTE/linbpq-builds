@@ -11,4 +11,5 @@ jobs:
           git clone git://vps1.g8bpq.net/linbpq
           cd linbpq
           git remote add mirror https://m0lte:${{secrets.pat}}@github.com/M0LTE/linbpq.git
+          git pull mirror --rebase
           git push mirror
