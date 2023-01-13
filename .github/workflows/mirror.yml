@@ -11,8 +11,8 @@ jobs:
           git clone git://vps1.g8bpq.net/linbpq
           cd linbpq
           git remote add mirror https://m0lte:${{secrets.pat}}@github.com/M0LTE/linbpq.git
-          #git config user.name "github-actions"
-          #git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git config pull.rebase false
           git pull mirror master
           git push mirror
