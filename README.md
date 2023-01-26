@@ -12,6 +12,8 @@ sudo apt install libconfig9
 wget https://github.com/M0LTE/linbpq-builds/releases/download/release/linbpq
 chmod +x linbpq
 ./linbpq -v
+sudo mkdir /usr/bin/linbpq
+sudo mv linbpq /usr/bin/linbpq/
 ```
 
 This approach avoids the need to install the i386 architecture and loads of i386 packages on your amd64 box. It also avoids the need to have all of the `-dev` dependencies installed to allow you to build it from source.
@@ -19,3 +21,25 @@ This approach avoids the need to install the i386 architecture and loads of i386
 I may iterate on this to automate further and bring other tools (e.g. QtTermTCP) and other platforms (e.g. Raspberry Pi) into scope.
 
 No attempt is made to retain previous releases - only the latest release is retained currently.
+
+## Auto-start
+
+```shell
+sudo sh -c 'echo "[Unit]
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/linbpq/linbpq
+WorkingDirectory=/usr/bin/linbpq
+Restart=always
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/linbpq.service'
+sudo systemctl enable linbpq
+```
+
+and after you have written a config file to `/usr/bin/linbpq/bpq32.cfg`:
+
+```shell
+sudo systemctl start linbpq
+```
