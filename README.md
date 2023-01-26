@@ -38,7 +38,15 @@ WantedBy=multi-user.target" > /etc/systemd/system/linbpq.service'
 sudo systemctl enable linbpq
 ```
 
-and after you have written a config file to `/usr/bin/linbpq/bpq32.cfg`:
+and after you have written a config file to `/usr/bin/linbpq/bpq32.cfg`, e.g.
+
+```shell
+sudo sh -c 'echo "SIMPLE
+LOCATOR=none
+NODECALL=N0CALL
+PORT
+ENDPORT" > /usr/bin/linbpq/bpq32.cfg'
+```
 
 ```shell
 sudo systemctl start linbpq
