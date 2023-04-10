@@ -9,7 +9,7 @@ To get up and running using this binary on Ubuntu amd64:
 
 ```shell
 sudo apt install libconfig9
-wget https://github.com/M0LTE/linbpq-builds/releases/download/release/linbpq
+wget https://github.com/M0LTE/linbpq/releases/download/release/linbpq
 chmod +x linbpq
 ./linbpq -v
 sudo mkdir /usr/bin/linbpq
